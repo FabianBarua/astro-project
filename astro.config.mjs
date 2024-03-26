@@ -5,6 +5,6 @@ import tailwind from '@astrojs/tailwind'
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://fabianbarua.github.io/',
-  base: '/spaceX',
+  site: 'https://fabianbarua.github.io/spaceX',
+  base: '/spaceX/',
 })
