@@ -3,15 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import { getLaunchById, getLaunches } from "../../services/spacex";
 const { id } = Astro.params;
 
-let flight_number,
-  success,
-  small,
-  large,
-  name,
-  details,
-  failures,
-  data,
-  videoId;
+let flight_number, success, small, name, details, data, videoId;
 
 function unixToDate(unix: number) {
   const date = new Date(unix * 1000);
@@ -23,11 +15,9 @@ if (id) {
   flight_number = launch.flight_number;
   success = launch.success;
   small = launch.links.patch.small;
-  large = launch.links.patch.large;
   name = launch.name;
   details = launch.details;
   data = unixToDate(launch.date_unix);
-  failures = launch.failures.map(({ reason }: { reason: string }) => reason);
   videoId = launch.links.youtube_id;
 }
 
