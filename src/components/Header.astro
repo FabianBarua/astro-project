@@ -15,15 +15,15 @@ import RocketIcon from "./icons/RocketIcon.astro";
   <nav
     class="flex flex-col items-center justify-between w-full text-center md:flex-row"
   >
-    <HeaderButton class="text-white" href="/">
+    <HeaderButton class="text-white" href=`${import.meta.env.BASE_URL}`>
       Last launches
       <RocketIcon slot="before" />
     </HeaderButton>
-    <HeaderButton class="text-white" href="/oldest">
+    <HeaderButton class="text-white" href=`${import.meta.env.BASE_URL}/oldest`>
       Oldest launches
       <ClockIcon slot="before" />
     </HeaderButton>
-    <HeaderButton class="text-white" href="/about">
+    <HeaderButton class="text-white" href=`${import.meta.env.BASE_URL}/about`>
       About the project
       <QuestionIcon slot="before" />
     </HeaderButton>
